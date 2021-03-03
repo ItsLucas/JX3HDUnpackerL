@@ -3,7 +3,7 @@
 #
 cmake_minimum_required (VERSION 3.8)
 
-if(UNIX)
+if(UNIX OR APPLE)
 include("cmake/HunterGate.cmake")
 HunterGate(
     URL "https://github.com/cpp-pm/hunter/archive/v0.23.295.tar.gz"
@@ -14,7 +14,7 @@ endif()
  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -O2")
 project ("JX3HDUnpackerL")
 
-if(UNIX)
+if(UNIX OR APPLE)
 hunter_add_package(CURL)
 hunter_add_package(zstd)
 find_package(Threads REQUIRED)
