@@ -5,7 +5,7 @@
 
 #include <iostream>
 #define _CRT_SECURE_NO_WARNINGS
-#define __WIN32__
+
 #include <sstream>
 #include <cstring>
 #include <cstdio>
