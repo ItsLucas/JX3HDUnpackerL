@@ -21,7 +21,7 @@ void writefile(char* content, string filename, string base,
     }
     fwrite(content, sz, 1, fout);
     fclose(fout);
-#if defined(__WIN32__)
+#if defined(WIN32) || defined(_WIN32) || defined(__WIN32__) || defined(__NT__)
     return;
 #elif defined(__linux__)
     string cmd = cmdString + filename + "> /dev/null 2>&1";
@@ -72,7 +72,8 @@ void local_unpack(string _datpath) {
         exit(1);
     }
     fseek(fin, 0x10, SEEK_CUR);
-#if defined(__WIN32__)
+#if defined(WIN32) || defined(_WIN32) || defined(__WIN32__) || defined(__NT__)
+
     if (_mkdir(path.c_str())) {
         printf("cannot create path %s\n", path.c_str());
         exit(1);
@@ -163,7 +164,7 @@ void remote_unpack(string apath) {
         exit(1);
     }
     fseek(fin, 0x10, SEEK_CUR);
-#if defined(__WIN32__)
+#if defined(WIN32) || defined(_WIN32) || defined(__WIN32__) || defined(__NT__)
     if (_mkdir(path.c_str())) {
         printf("cannot create path %s\n", path.c_str());
         exit(1);

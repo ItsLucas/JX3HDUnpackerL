@@ -9,7 +9,7 @@
 #include <sstream>
 #include <cstring>
 #include <cstdio>
-#if defined(__WIN32__)
+#if defined(WIN32) || defined(_WIN32) || defined(__WIN32__) || defined(__NT__)
 #include <direct.h>
 #elif defined(__linux__)
 #include <sys/stat.h>
