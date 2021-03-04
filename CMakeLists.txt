@@ -27,7 +27,7 @@ find_package(CURL CONFIG REQUIRED)
 find_package(zstd CONFIG REQUIRED)
 
 # 将源代码添加到此项目的可执行文件。
-add_executable (JX3HDUnpackerL "JX3HDUnpackerL.cpp" "JX3HDUnpackerL.h" "ini.c" "ini.h" "INIReader.cpp" "INIReader.h" "miniz.h" "zip.c" "zip.h")
+add_executable (JX3HDUnpackerL "JX3HDUnpackerL.cpp" "JX3HDUnpackerL.h" "ini.c" "ini.h" "INIReader.cpp" "INIReader.h" "miniz.h" "zip.c" "zip.h" "config.h")
 
 target_link_libraries(JX3HDUnpackerL CURL::libcurl zstd::libzstd_shared)
 # TODO: 如有需要，请添加测试并安装目标。

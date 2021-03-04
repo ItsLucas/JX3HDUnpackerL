@@ -19,4 +19,9 @@
 #include <curl/curl.h>
 #include "INIReader.h"
 #include "zip.h"
+#include "config.h"
 // TODO: 在此处引用程序需要的其他标头。
+
+void dounpack(FILE*& fin, const char* idxpath, std::string& datpath, std::string& path);
+
+void download_update(const char** argv);
